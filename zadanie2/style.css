@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "MojFont";
+    src: url("font.ttf") format("truetype");
+}
+
+body {
+    font-family: "MojFont", sans-serif;
+    background-color: #d8d7d7;
+    margin: 0;
+}
+
+header {
+    background-color: #2b4f26;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+main {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+}
+
+h2 {
+    color: darkblue;
+}
+
+p {
+    font-size: 18px;
+    /* text-align: center; */
+}
+
+.googleLink:hover {
+    color:crimson;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+img:hover {
+    opacity: 0.85;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    background-color: #222;
+    color: gray;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color: #444;
+}
