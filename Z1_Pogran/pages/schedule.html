@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kedy ma zastihnete?</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+    <header>
+        <img src="../img/monogram.svg" alt="JP monogram" class="monogram">
+
+        <div class = "headerText">
+            <h1>Jozef Pogran</h1>
+            <p>Študent aplikovanej informatiky, zaujímajú ma webové technológie.</p>
+        </div>
+    </header>
+
+    <nav>
+        <input type="checkbox" id="menuToggle">
+
+        <label for="menuToggle" class="hamburger">☰</label>
+
+        <ul>
+            <li><a href="../index.html">Profil</a></li>
+            <li><a href="cv.html">Životopis</a></li>
+            <li><a href="map.html">Kde ma nájdete?</a></li>
+            <li><a href="schedule.html"  class="active">Kedy ma zastihnete?</a></li>
+            <li><a href="workspace.html">Pracovné prostredie</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Kedy ma zastihnete?</h2>
+
+        <p id="currentLesson">
+            Kontrolujem aktuálny rozvrh...
+        </p>
+
+        <div class="scheduleFilters">
+            <button type="button" class="filterButton active" data-filter="all">
+                Všetko
+            </button>
+
+            <button type="button" class="filterButton" data-filter="lecture">
+                Prednášky
+            </button>
+
+            <button type="button" class="filterButton" data-filter="exercise">
+                Cvičenia
+            </button>
+        </div>
+
+        <p id="filterMessage"></p>
+
+        <div class="scheduleWrapper">
+            <table id="scheduleTable">
+                <thead>
+                    <tr>
+                        <th>Deň</th>
+                        <th>7:00</th>
+                        <th>8:00</th>
+                        <th>9:00</th>
+                        <th>10:00</th>
+                        <th>11:00</th>
+                        <th>12:00</th>
+                        <th>13:00</th>
+                        <th>14:00</th>
+                        <th>15:00</th>
+                        <th>16:00</th>
+                        <th>17:00</th>
+                        <th>18:00</th>
+                        <th>19:00</th>
+                        <th>20:00</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <!-- Monday -->
+                    <tr>
+                        <th>Pondelok</th>
+
+                        <td colspan="2" class="free"></td>
+
+                        <td
+                            colspan="2"
+                            class="lesson physical"
+                            data-type="physical"
+                            data-day="1"
+                            data-start="09:00"
+                            data-end="10:50"
+                        >
+                            <strong>Telesná kultúra</strong>
+                            <span>9:00 – 10:50</span>
+                        </td>
+
+                        <td
+                            colspan="2"
+                            class="lesson exercise"
+                            data-type="exercise"
+                            data-day="1"
+                            data-start="11:00"
+                            data-end="12:50"
+                        >
+                            <strong>Webové technológie</strong>
+                            <span>11:00 – 12:50</span>
+                            <span>C137</span>
+                        </td>
+
+                        <td
+                            colspan="2"
+                            class="lesson exercise"
+                            data-type="exercise"
+                            data-day="1"
+                            data-start="13:00"
+                            data-end="14:50"
+                        >
+                            <strong>Operačné systémy</strong>
+                            <span>13:00 – 14:50</span>
+                            <span>cpu-c</span>
+                        </td>
+
+                        <td
+                            colspan="2"
+                            class="lesson lecture"
+                            data-type="lecture"
+                            data-day="1"
+                            data-start="15:00"
+                            data-end="16:50"
+                        >
+                            <strong>Lineárna algebra 2</strong>
+                            <span>15:00 – 16:50</span>
+                            <span>cd300</span>
+                        </td>
+
+                        <td colspan="4" class="free"></td>
+                    </tr>
+
+
+                    <!-- Tuesday -->
+                    <tr>
+                        <th>Utorok</th>
+
+                        <td class="free"></td>
+
+                        <td
+                            colspan="2"
+                            class="lesson exercise"
+                            data-type="exercise"
+                            data-day="2"
+                            data-start="08:00"
+                            data-end="09:50"
+                        >
+                            <strong>Analýza a zložitosť algoritmov</strong>
+                            <span>8:00 – 9:50</span>
+                            <span>de300</span>
+                        </td>
+
+                        <td
+                            colspan="2"
+                            class="lesson lecture"
+                            data-type="lecture"
+                            data-day="2"
+                            data-start="10:00"
+                            data-end="11:50"
+                        >
+                            <strong>Webové technológie</strong>
+                            <span>10:00 – 11:50</span>
+                            <span>cd150</span>
+                        </td>
+
+                        <td colspan="3" class="free"></td>
+
+                        <td
+                            colspan="2"
+                            class="lesson lecture"
+                            data-type="lecture"
+                            data-day="2"
+                            data-start="15:00"
+                            data-end="16:50"
+                        >
+                            <strong>Softvérové inžinierstvo</strong>
+                            <span>15:00 – 16:50</span>
+                            <span>cd300</span>
+                        </td>
+
+                        <td
+                            class="lesson exercise"
+                            data-type="exercise"
+                            data-day="2"
+                            data-start="17:00"
+                            data-end="17:50"
+                        >
+                            <strong>Softvérové inžinierstvo</strong>
+                            <span>17:00 – 17:50</span>
+                            <span>cd300</span>
+                        </td>
+
+                        <td colspan="3" class="free"></td>
+                    </tr>
+
+
+                    <!-- Wednesday -->
+                    <tr>
+                        <th>Streda</th>
+
+                        <td class="free"></td>
+
+                        <td
+                            colspan="2"
+                            class="lesson lecture"
+                            data-type="lecture"
+                            data-day="3"
+                            data-start="08:00"
+                            data-end="09:50"
+                        >
+                            <strong>Operačné systémy</strong>
+                            <span>8:00 – 9:50</span>
+                            <span>cd300</span>
+                        </td>
+
+                        <td
+                            colspan="2"
+                            class="lesson lecture"
+                            data-type="lecture"
+                            data-day="3"
+                            data-start="10:00"
+                            data-end="11:50"
+                        >
+                            <strong>Analýza a zložitosť algoritmov</strong>
+                            <span>10:00 – 11:50</span>
+                            <span>bc150</span>
+                        </td>
+
+                        <td class="free"></td>
+
+                        <td
+                            colspan="2"
+                            class="lesson lecture"
+                            data-type="lecture"
+                            data-day="3"
+                            data-start="13:00"
+                            data-end="14:50"
+                        >
+                            <strong>Webové technológie</strong>
+                            <span>13:00 – 14:50</span>
+                            <span>cd150</span>
+                        </td>
+
+                        <td colspan="6" class="free"></td>
+                    </tr>
+
+
+                    <!-- Thursday -->
+                    <tr>
+                        <th>Štvrtok</th>
+
+                        <td colspan="4" class="free"></td>
+
+                        <td
+                            class="lesson exercise"
+                            data-type="exercise"
+                            data-day="4"
+                            data-start="11:00"
+                            data-end="11:50"
+                        >
+                            <strong>Softvérové inžinierstvo</strong>
+                            <span>11:00 – 11:50</span>
+                            <span>C137</span>
+                        </td>
+
+                        <td colspan="9" class="free"></td>
+                    </tr>
+
+
+                    <!-- Friday -->
+                    <tr>
+                        <th>Piatok</th>
+
+                        <td colspan="2" class="free"></td>
+
+                        <td
+                            class="lesson exercise"
+                            data-type="exercise"
+                            data-day="5"
+                            data-start="09:00"
+                            data-end="09:50"
+                        >
+                            <strong>Analýza a zložitosť algoritmov</strong>
+                            <span>9:00 – 9:50</span>
+                            <span>cd150</span>
+                        </td>
+
+                        <td colspan="5" class="free"></td>
+
+                        <td
+                            colspan="2"
+                            class="lesson exercise"
+                            data-type="exercise"
+                            data-day="5"
+                            data-start="15:00"
+                            data-end="16:50"
+                        >
+                            <strong>Lineárna algebra 2</strong>
+                            <span>15:00 – 16:50</span>
+                            <span>bc35</span>
+                        </td>
+
+                        <td colspan="4" class="free"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <section class="semesterProgress">
+            <h2>Priebeh semestra</h2>
+
+            <div class="progressBackground">
+                <div id="semesterProgressBar"></div>
+            </div>
+
+            <p id="semesterProgressText"></p>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            Kontakt:
+            <a href="mailto:xpogran@stuba.sk">xpogran@stuba.sk</a>
+        </address>
+
+        <p>&copy; 2026 Jozef Pogran</p>
+
+        <p>
+            Zdroje: vlastné fotografie,
+            <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>,
+            <a href="https://leafletjs.com/" target="_blank">Leaflet</a>
+        </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

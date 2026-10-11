@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kde ma nájdete?</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../favicon.ico">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+<body>
+    <header>
+        <img src="../img/monogram.svg" alt="JP monogram" class="monogram">
+
+        <div class = "headerText">
+            <h1>Jozef Pogran</h1>
+            <p>Študent aplikovanej informatiky, zaujímajú ma webové technológie.</p>
+        </div>
+    </header>
+
+    <nav>
+        <input type="checkbox" id="menuToggle">
+
+        <label for="menuToggle" class="hamburger">☰</label>
+
+        <ul>
+            <li><a href="../index.html">Profil</a></li>
+            <li><a href="cv.html">Životopis</a></li>
+            <li><a href="map.html"  class="active">Kde ma nájdete?</a></li>
+            <li><a href="schedule.html">Kedy ma zastihnete?</a></li>
+            <li><a href="workspace.html">Pracovné prostredie</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Kde ma nájdete?</h2>
+
+        <p>
+            Na mape je vyznačená moja škola a približná poloha bydliska.
+            Kliknutím na mapu môžete pridať vlastný bod.
+        </p>
+
+        <div id="map"></div>
+
+        <p id="mapMessage">
+            Zatiaľ nebol pridaný žiadny vlastný bod. Kliknite na mapu a pridajte ho.
+        </p>
+
+        <section class="mapControls">
+            <h2>Výpočet vzdialenosti</h2>
+
+            <label for="pointSelect">Pridaný bod:</label>
+
+            <select id="pointSelect">
+                <option value="">Vyberte bod</option>
+            </select>
+
+            <label for="destinationSelect">Cieľ:</label>
+
+            <select id="destinationSelect">
+                <option value="school">FEI STU</option>
+                <option value="home">Domov</option>
+            </select>
+
+            <button id="distanceButton">
+                Vypočítať vzdialenosť
+            </button>
+
+            <p id="distanceResult"></p>
+        </section>
+
+        <p>
+            Mapové podklady:
+            <a href="https://www.openstreetmap.org/" target="_blank">
+                OpenStreetMap
+            </a>
+
+            |
+            
+            Mapová knižnica:
+            <a href="https://leafletjs.com/" target="_blank">
+                Leaflet
+            </a>
+        </p>
+    </main>
+    
+    <footer>
+        <address>
+            Kontakt:
+            <a href="mailto:xpogran@stuba.sk">xpogran@stuba.sk</a>
+        </address>
+
+        <p>&copy; 2026 Jozef Pogran</p>
+
+        <p>
+            Zdroje: vlastné fotografie,
+            <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>,
+            <a href="https://leafletjs.com/" target="_blank">Leaflet</a>
+        </p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

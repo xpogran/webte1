@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <img src="img/monogram.svg" alt="JP monogram" class="monogram">
+
+        <div class = "headerText">
+            <h1>Jozef Pogran</h1>
+            <p>Študent aplikovanej informatiky, zaujímajú ma webové technológie.</p>
+        </div>
+    </header>
+
+    <nav>
+        <input type="checkbox" id="menuToggle">
+
+        <label for="menuToggle" class="hamburger">☰</label>
+        
+        <ul>
+            <li><a href="index.html" class="active">Profil</a></li>
+            <li><a href="pages/cv.html">Životopis</a></li>
+            <li><a href="pages/map.html">Kde ma nájdete?</a></li>
+            <li><a href="pages/schedule.html">Kedy ma zastihnete?</a></li>
+            <li><a href="pages/workspace.html">Pracovné prostredie</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <img src="img/me.jpg" alt="Moja fotka" width="220" height="280" class="profilePhoto" loading="lazy">
+
+        <h2>Kto Som?</h2>
+        <p>
+            Volám sa Jozef Pogran a som študent aplikovanej informatiky na FEI STU. 
+            Zameranie môjho štúdia je MSUS (modelovanie a simulácia udalostných systémov). 
+            Zaujímam sa najmä o oblasť umelej inteligencie a možnosti jej využitia. 
+        </p>
+        <p>
+            Mojím cieľom je ďalej si rozvíjať praktické programátorské zručnosti
+            a získavať skúsenosti s návrhom a vývojom reálnych softvérov.
+        </p>
+
+        <div class="keyAreas">
+            <h2>Kľúčové oblasti</h2>
+            <ul>
+                <li>Webové technológie</li>
+                <li>Python</li>
+                <li>Umelá inteligencia</li>
+            </ul>
+        </div>
+
+        <aside>
+            <p>"Najlepší spôsob, ako sa niečo naučiť, je skúsiť to vytvoriť."</p>
+        </aside>
+
+    </main>
+
+    <footer>
+        <address>
+            Kontakt:
+            <a href="mailto:xpogran@stuba.sk">xpogran@stuba.sk</a>
+        </address>
+
+        <p>&copy; 2026 Jozef Pogran</p>
+
+        <p>
+            Zdroje: vlastné fotografie,
+            <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>,
+            <a href="https://leafletjs.com/" target="_blank">Leaflet</a>
+        </p>
+    </footer>
+</body>
+</html>

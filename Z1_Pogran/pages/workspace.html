@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pracovné prostredie</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+    <header>
+        <img src="../img/monogram.svg" alt="JP monogram" class="monogram">
+
+        <div class = "headerText">
+            <h1>Jozef Pogran</h1>
+            <p>Študent aplikovanej informatiky, zaujímajú ma webové technológie.</p>
+        </div>
+    </header>
+
+    <nav>
+        <input type="checkbox" id="menuToggle">
+
+        <label for="menuToggle" class="hamburger">☰</label>
+
+        <ul>
+            <li><a href="../index.html">Profil</a></li>
+            <li><a href="cv.html">Životopis</a></li>
+            <li><a href="map.html">Kde ma nájdete?</a></li>
+            <li><a href="schedule.html">Kedy ma zastihnete?</a></li>
+            <li><a href="workspace.html" class="active">Pracovné prostredie</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Moje pracovné prostredie</h2>
+
+        <p>
+            Toto je moje pracovné prostredie, ktoré používam pri štúdiu.
+        </p>
+
+        <figure class="hotspot-image">
+
+            <img
+                src="../img/workspace.jpg"
+                alt="Moje pracovné prostredie"
+                width="1536"
+                height="1024"
+            >
+
+            <div class="hotspot" style="--x: 46%; --y: 45%;">
+                <button class="hotspot__dot" type="button" aria-label="Notebook">1</button>
+
+                <div class="hotspot__panel">
+                    <h3>Notebook</h3>
+                    <p>
+                        Notebook využívam pri učení a programovaní zadaní.
+                        Súvisí najmä s webovými technológiami a softvérovým inžinierstvom.
+                    </p>
+                </div>
+            </div>
+
+            <div class="hotspot hotspot--left" style="--x: 78%; --y: 76%;">
+                <button class="hotspot__dot" type="button" aria-label="Slúchadlá">2</button>
+
+                <div class="hotspot__panel">
+                    <h3>Slúchadlá</h3>
+                    <p>
+                        Bezdrôtové slúchadlá používam pri učení a sústredenej práci.
+                    </p>
+                </div>
+            </div>
+
+            <div class="hotspot" style="--x: 22%; --y: 42%;">
+                <button class="hotspot__dot" type="button" aria-label="Monster Energy">3</button>
+
+                <div class="hotspot__panel">
+                    <h3>Monster Energy</h3>
+                    <p>
+                        Spríjemnenie dňa pri skorom vstávaní.
+                    </p>
+                </div>
+            </div>
+
+            <div class="hotspot" style="--x: 14%; --y: 72%;">
+                <button class="hotspot__dot" type="button" aria-label="Tablet">4</button>
+
+                <div class="hotspot__panel">
+                    <h3>Tablet</h3>
+                    <p>
+                        Tablet využívam na ručné písanie poznámok a riešenie úloh.
+                    </p>
+                </div>
+            </div>
+
+            <div class="hotspot hotspot--left" style="--x: 72%; --y: 56%;">
+                <button class="hotspot__dot" type="button" aria-label="Kniha">5</button>
+
+                <div class="hotspot__panel">
+                    <h3>Kniha</h3>
+                    <p>
+                        Knihu používam ako dodatočný študijný materiál k lineárnej algebre.
+                    </p>
+                </div>
+            </div>
+
+        </figure>
+    </main>
+
+    <footer>
+        <address>
+            Kontakt:
+            <a href="mailto:xpogran@stuba.sk">xpogran@stuba.sk</a>
+        </address>
+
+        <p>&copy; 2026 Jozef Pogran</p>
+
+        <p>
+            Zdroje: vlastné fotografie,
+            <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>,
+            <a href="https://leafletjs.com/" target="_blank">Leaflet</a>
+        </p>
+    </footer>
+</body>
+</html>

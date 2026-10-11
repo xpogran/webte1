@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title">
+  <title>JP monogram</title>
+
+  <!-- outer circle -->
+  <circle cx="50" cy="50" r="44" fill="#1e2c4d"/>
+
+  <!-- accent ring -->
+  <circle cx="50" cy="50" r="41" fill="none" stroke="#38bdf8" stroke-width="4"/>
+
+  <!-- initials -->
+  <text
+    x="50"
+    y="52"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Roboto, Arial, sans-serif"
+    font-size="30"
+    font-weight="700"
+    fill="#ffffff"
+    letter-spacing="-1">
+    JP
+  </text>
+</svg>

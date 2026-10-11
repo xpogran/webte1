@@ -1,0 +1,80 @@
+@media print {
+
+    /* Hide navigation completely */
+    nav {
+        display: none;
+    }
+
+    /* Remove decorative dark backgrounds */
+    header,
+    footer,
+    .cvLeft,
+    .cvRight {
+        background: white;
+        color: black;
+    }
+
+    /* Remove unnecessary decoration */
+    .cv {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    /* Make links print normally */
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* Make the page more compact */
+    body {
+        margin: 0;
+        font-size: 11pt;
+    }
+
+    main {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Keep CV as two columns */
+    .cv {
+        display: flex;
+        margin: 0;
+    }
+
+    .cvLeft {
+        width: 30%;
+        padding: 15px;
+        border-right: 1px solid black;
+    }
+
+    .cvRight {
+        width: 70%;
+        padding: 15px;
+    }
+
+    /* Smaller photo so it fits on one page */
+    .cvPhoto {
+        max-width: 140px;
+        height: auto;
+    }
+
+    /* Reduce spacing */
+    h1,
+    h2,
+    h3,
+    p {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    .skillList li {
+        padding: 3px 0;
+    }
+
+    footer {
+        display: none;
+    }
+}
