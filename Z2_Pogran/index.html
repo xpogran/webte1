@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Prehľad Obedov</title>
 
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
 </head>
@@ -16,6 +17,28 @@
         <h1>Obedár FEI</h1>
         <p>Prehľad obedových menu v okolí FEI STU</p>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Obedové menu</a></li>
+            <li><a href="pages/about.html">O projekte</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="day-selection">
+            <h2>Vyberte deň</h2>
+
+            <div class="day-buttons">
+                <button type="button" data-day="1">Pondelok</button>
+                <button type="button" data-day="2">Utorok</button>
+                <button type="button" data-day="3">Streda</button>
+                <button type="button" data-day="4">Štvrtok</button>
+                <button type="button" data-day="5">Piatok</button>
+                <button type="button" data-day="all">Celý týždeň</button>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

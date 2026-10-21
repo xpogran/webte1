@@ -56,5 +56,28 @@ header {
 }
 
 header p {
-    font-family: "Roboto-italic";
+    font-family: "Roboto-italic", Arial, Helvetica, sans-serif;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #10203A;
+    padding: 0 5%;
+}
+
+nav ul {
+    display: flex;
+
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--color-accent);
 }
