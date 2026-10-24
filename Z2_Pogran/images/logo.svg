@@ -1,0 +1,98 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 200 200"
+     fill="none">
+
+    <!-- ORANGE DECORATIVE ARCS -->
+    <path d="M36 76 A76 76 0 0 1 72 32"
+          stroke="#F59E0B"
+          stroke-width="6"
+          stroke-linecap="round"/>
+
+    <path d="M128 32 A76 76 0 0 1 164 76"
+          stroke="#F59E0B"
+          stroke-width="6"
+          stroke-linecap="round"/>
+
+    <path d="M57 170 Q100 200 143 170"
+          stroke="#F59E0B"
+          stroke-width="6"
+          stroke-linecap="round"/>
+
+    <!-- STEAM -->
+    <path d="M83 85
+             C65 68 98 56 83 37
+             C106 53 79 66 93 83"
+          fill="#F59E0B"/>
+
+    <path d="M102 82
+             C86 59 120 41 101 16
+             C134 38 103 62 113 82"
+          fill="#F59E0B"/>
+
+    <path d="M121 85
+             C108 70 140 59 123 43
+             C146 60 124 73 132 85"
+          fill="#F59E0B"/>
+
+    <!-- FORK -->
+    <path d="M13 65 V91
+             Q13 103 22 106
+             V163
+             Q22 169 27 169
+             Q32 169 32 163
+             V106
+             Q41 103 41 91
+             V65"
+          fill="#FFFFFF"/>
+
+    <!-- FORK PRONG GAPS -->
+    <path d="M20 65 V93
+             M27 65 V93
+             M34 65 V93"
+          stroke="#172B4D"
+          stroke-width="3"
+          stroke-linecap="round"/>
+
+    <!-- KNIFE -->
+    <path d="M178 62
+             C164 72 160 88 160 108
+             Q160 118 174 119
+             V163
+             Q174 169 179 169
+             Q184 169 184 163
+             V65
+             Q184 58 178 62 Z"
+          fill="#FFFFFF"/>
+
+    <!-- SERVING DOME HANDLE -->
+    <circle cx="100" cy="91" r="8"
+            fill="#FFFFFF"/>
+
+    <!-- SERVING DOME -->
+    <path d="M47 147
+             A53 53 0 0 1 153 147
+             Z"
+          fill="#FFFFFF"/>
+
+    <!-- DOME HIGHLIGHT -->
+    <path d="M64 127
+             Q73 108 91 105"
+          stroke="#CBD5E1"
+          stroke-width="3"
+          stroke-linecap="round"/>
+
+    <!-- SERVING TRAY -->
+    <rect x="39" y="149"
+          width="122" height="8"
+          rx="4"
+          fill="#FFFFFF"/>
+
+    <!-- TRAY BASE -->
+    <path d="M65 161
+             Q100 178 135 161"
+          stroke="#FFFFFF"
+          stroke-width="5"
+          stroke-linecap="round"/>
+
+</svg>

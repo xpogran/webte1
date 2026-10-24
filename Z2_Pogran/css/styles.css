@@ -37,6 +37,7 @@
 /* UNIVERSAL RESET */
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -51,33 +52,289 @@ body {
 
 /* HEADER */
 header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
     background-color: var(--color-primary);
     color: white;
+
+    padding: 1.5rem 5%;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    transform: translateY(10px);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    
+    margin-bottom: 0.5rem;
 }
 
 header p {
-    font-family: "Roboto-italic", Arial, Helvetica, sans-serif;
+    font-family: "Roboto-italic", sans-serif;
+    color: #CBD5E1;
+}
+
+header img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 /* NAVIGATION */
 nav {
     background-color: #10203A;
     padding: 0 5%;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav ul {
     display: flex;
-
+    gap: 2rem;
     list-style: none;
 }
 
 nav a {
     display: block;
+    padding: 1rem 0;
+
     color: white;
     text-decoration: none;
+
+    border-bottom: 3px solid transparent;
+
+    transition: color 0.2s,
+                border-color 0.2s;
 }
 
 nav a:hover,
 nav a.active {
     color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+}
+
+/* MAIN */
+main {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+main h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    margin-bottom: 1.25rem;
+}
+
+main section {
+    background-color: var(--color-surface);
+
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+}
+
+/* PAGE INTRO */
+.page-intro {
+    margin-bottom: 2rem;
+}
+
+.page-intro h2 {
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+
+    font-size: 2rem;
+}
+
+.page-intro p {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+/* DAY SELECTION */
+.day-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.day-buttons button {
+    padding: 0.75rem 1.25rem;
+
+    background-color: #F1F5F9;
+    color: var(--color-text);
+
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 0.9rem;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s,
+                color 0.2s;
+}
+
+.day-buttons button:hover {
+    background-color: #E2E8F0;
+}
+
+.day-buttons button.active {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+
+    font-weight: 400;
+}
+
+/* ACTION BUTTONS */
+#clear-cache,
+#refresh-menu {
+    padding: 0.75rem 1.25rem;
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 0.9rem;
+
+    cursor: pointer;
+}
+
+#refresh-menu {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+#refresh-menu:hover {
+    background-color: #28446D;
+}
+
+#clear-cache {
+    background-color: #F1F5F9;
+    color: var(--color-text-muted);
+}
+
+#clear-cache:hover {
+    background-color: #E2E8F0;
+}
+
+/* BOOTSTRAP + DYNAMIC RESTAURANT RESULTS */
+/* Prevent Bootstrap's default paragraph and nav-list margins from changing the existing layout. */
+header h1, header p, nav ul {
+    margin-bottom: 0;
+}
+
+.header-text {
+    transform: none;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.filters h2 {
+    width: 100%;
+}
+
+.restaurant-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .65rem 1.25rem;
+    flex: 1 1 300px;
+}
+
+.restaurant-choice {
+    display: flex;
+    align-items: center;
+    gap: .45rem; cursor:
+    pointer;
+}
+
+.restaurant-choice input {
+    accent-color: var(--color-primary);
+    width: 1rem;
+    height: 1rem;
+}
+
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin-left: auto;
+}
+
+.action-buttons button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+/* Unlike the controls, restaurant results don't have another white outer card. */
+main section.menu-results {
+    padding: 0;
+    margin-top: 1.5rem;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+}
+.menu-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: .7rem; margin-bottom: 1rem; }
+.menu-heading h2 { margin-bottom: 0; color: var(--color-primary); }
+.demo-label { font-size: .8rem; color: var(--color-text-muted); }
+
+.restaurant-card {
+    height: 100%;
+    background: var(--color-surface);
+    padding: 1.3rem;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+}
+.restaurant-card h3 { font-size: 1.2rem; color: var(--color-primary); font-weight: 700; margin-bottom: .3rem; }
+.restaurant-location { color: var(--color-text-muted); font-size: .85rem; margin-bottom: 1rem; }
+.meal-group { border-top: 1px solid var(--color-border); padding-top: 1rem; margin-top: 1rem; }
+.meal-group h4 { color: var(--color-text-muted); font-size: .75rem; font-weight: 700; letter-spacing: .05em; margin-bottom: .65rem; text-transform: uppercase; }
+.meal-item { display: flex; justify-content: space-between; align-items: flex-start; gap: .75rem; margin-top: .65rem; }
+.meal-item p { margin: 0; }
+.meal-name { line-height: 1.4; }
+.meal-details { font-size: .77rem; color: var(--color-text-muted); margin-top: .2rem; }
+.meal-price { font-weight: 700; white-space: nowrap; color: var(--color-primary); }
+.day-label { font-size: .9rem; font-weight: 700; margin-top: 1rem; color: var(--color-primary); }
+.no-menu { color: var(--color-text-muted); }
+.site-footer { text-align: center; color: var(--color-text-muted); font-size: .8rem; padding: 1rem 5% 2rem; }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: .8rem;
+    padding: 1rem 5% 2rem;
+}
+
+
+@media (max-width: 600px) {
+    header { gap: 1rem; padding: 1.25rem 5%; }
+    header img { width: 60px; height: 60px; }
+    header h1 { font-size: 1.5rem; }
+    header p { font-size: .85rem; }
+    main { width: 94%; }
+    main section { padding: 1rem; }
+    nav ul { gap: 1.5rem; }
+    .action-buttons { margin-left: 0; }
 }
